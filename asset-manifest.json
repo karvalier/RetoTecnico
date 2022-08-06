@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/reto-tecnico/static/css/main.59b77ce8.css",
-    "main.js": "/reto-tecnico/static/js/main.6f11c887.js",
+    "main.js": "/reto-tecnico/static/js/main.a3e18377.js",
     "index.html": "/reto-tecnico/index.html",
     "main.59b77ce8.css.map": "/reto-tecnico/static/css/main.59b77ce8.css.map",
-    "main.6f11c887.js.map": "/reto-tecnico/static/js/main.6f11c887.js.map"
+    "main.a3e18377.js.map": "/reto-tecnico/static/js/main.a3e18377.js.map"
   },
   "entrypoints": [
     "static/css/main.59b77ce8.css",
-    "static/js/main.6f11c887.js"
+    "static/js/main.a3e18377.js"
   ]
 }
