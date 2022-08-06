@@ -1,0 +1,22 @@
+.dark-mode{
+  background: #2c2c2c;
+  color: #a1a2a2;
+  .navbar {
+    background: #232323;
+    color: #a1a2a2;
+  }
+  .sidebar{
+    background: #2f3133;
+    color: #a1a2a2;
+    .header{
+      background: #2e4650;
+    }
+  }
+  .rs-btn{
+    background: #587983;
+    color: #fff;
+  }
+  .rs-btn-primary{
+    background: #3996b3;
+  }
+}
