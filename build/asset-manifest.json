@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reto-tecnico/static/css/main.475c7627.css",
+    "main.js": "/reto-tecnico/static/js/main.96438991.js",
+    "index.html": "/reto-tecnico/index.html",
+    "main.475c7627.css.map": "/reto-tecnico/static/css/main.475c7627.css.map",
+    "main.96438991.js.map": "/reto-tecnico/static/js/main.96438991.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.475c7627.css",
+    "static/js/main.96438991.js"
+  ]
+}

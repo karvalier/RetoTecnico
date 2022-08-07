@@ -1,15 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SimpleThunk } from '../types/SimpleTunk';
-import { Product } from '../types/types';
-
-interface Cart {
-    products: Product[]
-    amount: number;
-}
+import { Cart, Product } from '../types/types';
 
 const initialStateCart: Cart = {
     products: [],
-    amount: 0
 };
 
 const cart = createSlice({
@@ -17,18 +11,15 @@ const cart = createSlice({
   initialState: initialStateCart,
   reducers: {
     addProduct(state, action: PayloadAction<Product>) {  
-      const newAmount = state.amount + (action.payload.amount * action.payload.price);
       const newState = state; 
       const selIndicator = newState.products.find(
         (i) => i.id === action.payload.id
       );
       if (selIndicator) {
         selIndicator.amount = selIndicator.amount + action.payload.amount;
-        newState.amount = newAmount;
       }
       else {
         newState.products.push(action.payload);
-        newState.amount = newAmount;
       }
     },
     cleanProducts() {

@@ -2,6 +2,7 @@
   "name": "RetoTecnico",
   "version": "1.0.0",
   "private": false,
+  "homepage": "http://karvalier.github.io/reto-tecnico",
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@reduxjs/toolkit": "^1.8.0",
@@ -43,9 +44,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "sass": "sass",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

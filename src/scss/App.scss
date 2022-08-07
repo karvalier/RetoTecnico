@@ -1,13 +1,10 @@
-@import './variable.scss';
 @import './darkMode.scss';
+
 .App {
-  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  font-family: sans-serif;
   text-align: center;
   letter-spacing: 1px;
 }
 
-.content-app{
-  display: flex;
-}
 
 

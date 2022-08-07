@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FlexboxGrid } from 'rsuite';
 import Card from '../../components/Card/Card';
 import { addProduct } from '../../state/cart.state';
-import { loadProducts } from '../../state/products.state';
 import { StoreType } from '../../state/store';
 import { Product } from '../../types/types';
 
@@ -11,9 +10,6 @@ const  HomePage = () => {
   const products = useSelector((state: StoreType) => state.products);
   const cart = useSelector((state: StoreType) => state.cart);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadProducts())
-  }, []);
 
   const addToCard = (data: Product) => {
     dispatch(addProduct(data));

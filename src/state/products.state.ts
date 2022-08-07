@@ -77,8 +77,8 @@ const products = createSlice({
     addProducts( state, action: PayloadAction<Product[]>) {
       return [...action.payload];
     },
-    addProduct(state, action: PayloadAction<Product>) {
-      return [ action.payload, ...state ];
+    addProduct(state,  action: PayloadAction<Product>) {
+      return [{ ...action.payload, id: action.payload?.id || state.length + 1 }, ...state ];
     },
     addToCart(state, action: PayloadAction<{id: number, amount: number}>) {
       const selIndicator = state.find(

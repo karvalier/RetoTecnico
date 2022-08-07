@@ -3,7 +3,7 @@ import './Navbar.scss';
 
 const Navbar = (props: { children : React.ReactNode }) => {
   return (
-    <div className='navbar'>
+    <div className='navbar' id='navbar'>
        {props.children}
     </div>
   );

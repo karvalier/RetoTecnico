@@ -11,7 +11,7 @@ const Card = (props: {
   const [amountToCard, setAmountToCard] = useState(1);
 
   return (
-    <Panel shaded bordered bodyFill className='card'>
+    <Panel shaded bordered bodyFill className='card' data-testid="card">
         <Placeholder.Graph active />
         <div className='title'>{props.data.name}</div>
         <div className='text'>{props.data.price}$</div>
@@ -33,6 +33,7 @@ const Card = (props: {
           />
           <Button 
             appearance="primary"
+            data-testid="button-add-to-cart"
             disabled={props.data.amount === props.inCart}
             onClick={() => {
               props.onClick && props.onClick({ ...props.data, amount: amountToCard });

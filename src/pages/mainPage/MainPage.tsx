@@ -9,7 +9,6 @@ import productsState, { loadProducts } from '../../state/products.state';
 import { StoreType } from '../../state/store';
 import HomePage from '../HomePage/HomePage';
 import ProductPage from '../ProductPage/ProductPage';
-import './MainPage.scss';
 
 const  MainPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,7 +22,7 @@ const  MainPage = () => {
 
   const onBuy = () => {
     cart.products.forEach( product => {
-      dispatch(productsState.actions.addToCart({ id: product.id, amount: product.amount }))
+      product.id && dispatch(productsState.actions.addToCart({ id: product.id, amount: product.amount }))
     })
     dispatch(buyProducts());
   }
@@ -45,17 +44,16 @@ const  MainPage = () => {
       </Navbar>
       <Container>
           <Switch>
-            <Route exact path="/"> 
+            <Route exact path={process.env.PUBLIC_URL + '/'}> 
               <HomePage />
             </Route>
-            <Route exact path="/add-product"> 
+            <Route exact path={process.env.PUBLIC_URL + '/add-product'}> 
               <ProductPage />
             </Route>
           </Switch>
         <SidebarCart 
           title='Cart'
           listProduct={cart.products}
-          totalAmount={cart.amount}
           onClick={onBuy}
           onClean={onClean}
         />
@@ -63,7 +61,7 @@ const  MainPage = () => {
           icon={<Icon icon="plus" />} 
           placement="left"
           appearance='primary'
-          onClick={() => history.push('/add-product')}
+          onClick={() => history.push(process.env.PUBLIC_URL + '/add-product')}
           style={{ position: 'fixed', bottom: '10px', right: '10px' }}
         >
           Create Product
